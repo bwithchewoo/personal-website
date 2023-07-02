@@ -1,6 +1,56 @@
 import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './Home.css'
 const Home = () => {
+    const phrases = ['fullstack developer.', 'dreamer.', 'thinker.'];
+    const phraseIndex = useRef(0);
+    const textRef = useRef(null);
+  
+    useEffect(() => {
+      const textElement = textRef.current;
+      let timeout = null;
+  
+      const type = () => {
+        const currentPhrase = phrases[phraseIndex.current];
+        const currentPhraseLength = currentPhrase.length;
+        let currentLetter = 0;
+  
+        timeout = setInterval(() => {
+          if (currentLetter < currentPhraseLength) {
+            textElement.textContent += currentPhrase[currentLetter];
+            currentLetter++;
+          } else {
+            clearInterval(timeout);
+            timeout = setTimeout(erase, 1500);
+          }
+        }, 100);
+      };
+  
+      const erase = () => {
+        const currentPhrase = phrases[phraseIndex.current];
+        const currentPhraseLength = currentPhrase.length;
+        let currentLetter = currentPhraseLength - 1;
+  
+        timeout = setInterval(() => {
+          if (currentLetter >= 0) {
+            textElement.textContent = currentPhrase.slice(0, currentLetter);
+            currentLetter--;
+          } else {
+            clearInterval(timeout);
+            phraseIndex.current = (phraseIndex.current + 1) % phrases.length;
+            timeout = setTimeout(type, 500);
+          }
+        }, 100);
+      };
+  
+      type();
+  
+      return () => {
+        clearTimeout(timeout);
+        clearInterval(timeout);
+      };
+    }, []);
+  
     return (
         <div class="content">
             <div class="container"> 
@@ -110,7 +160,10 @@ const Home = () => {
                 </svg>
             </div>
             <div class="typewriter">
-                <h1>Hi. I am a fullstack developer.</h1>
+                
+                <h1>
+                <span>I am a</span> <span className="highlight" ref={textRef}></span> 
+                </h1>
             </div>
         </div>
     )
