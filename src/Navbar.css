@@ -1,0 +1,30 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 200px;
+    background-color: #f0f0f0;
+    color: #404040;
+}
+
+.navbar-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ADD8E6;
+    cursor: pointer;
+    font-family: Verdana;
+    color: #404040;
+    text-decoration: none;
+}
+
+.navbar-item:hover {
+    background-color: #d0d0d0;
+}
+
+.navbar-item.active {
+    color: #967BB6;
+    font-weight: bold;
+}
