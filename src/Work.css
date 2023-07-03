@@ -29,12 +29,13 @@
     text-align: justify;
     transition: all 0.3s ease-out;
     border: 2px solid #1F2937;
+
   }
   .card h1 {
  
     font-size: 3rem;
     font-weight: bold;
-    margin: 1em 0 0.7em 1em;
+
     color: #1F2937;
   }
   .card p, .card h1 {
@@ -43,11 +44,15 @@
     
   }
 
-  .card p {
-    margin: 1em 0 0.7em 3em;
-    font-size: 1.2rem;
-    
-  }
+.front {
+    margin: 1em 0 0.7em 2em;
+}
+
+.card p {
+    font-size: large;
+}
+
+  
   .nav {
     color: white;
     font-size: 5rem;
@@ -81,4 +86,18 @@
   
   .card:not(.flipped) .back {
     display: none;
+  }
+
+  .card.flipped .back {
+    display: block;
+  }
+
+  .back {
+    /* Add the following styles for back content */
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 100%;
+    font-size: large;
+    color: black;
   }
