@@ -8,7 +8,7 @@
 }
 
 #bongo-cat {
- 
+    padding-top: 50px;
     height: 40vh;
     width: 40vw;
     top: 50vh;
@@ -67,7 +67,9 @@
     /* Add additional styles for highlighting if desired */
   }
 
- 
+ .typewriter {
+    padding-bottom: 50px;
+ }
   
   @keyframes backspacing {
     from {

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './Navbar';
 import Home from './Home';
-import About from './About';
-import Services from './Services';
+import Work from './Work';
+import Projects from './Projects';
 import Contact from './Contact';
 import { Linkedin } from 'react-feather'
 import { GitHub } from 'react-feather'
@@ -26,8 +26,8 @@ function App() {
           <div className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
+              <Route path="/work" element={<Work />} />
+              <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
