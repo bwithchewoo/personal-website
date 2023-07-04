@@ -1,0 +1,381 @@
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.contact {
+    position: absolute;
+
+z-index: 10;
+    margin-left: -125px;
+    margin-top: -125px;
+    height: 250px;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.1);
+    
+    border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.contact .envelope {
+    position: absolute;
+    height: 93px;
+    width: 165px;
+    left: 50%;
+    margin-left: -83px;
+    top: 50%;
+    margin-top: -50px;
+    background: #F9F9F9;
+    
+    transition: margin-top 300ms;
+    -ms-transition: margin-top 300ms;
+    -moz-transition: margin-top 300ms;
+    -o-transition: margin-top 300ms;
+    -webkit-transition: margin-top 300ms;
+}
+.contact:hover .envelope {
+    transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+    margin-top: -20px;
+}
+.contact .envelope .top {
+    position: absolute;
+    top: -3px;
+    left: 0px;
+    width: 100%;
+    height: 73px;
+    z-index: 30;
+    overflow: hidden;
+                    
+    transform-origin: top;
+    -ms-transform-origin: top;
+    -moz-transform-origin: top;
+    -o-transform-origin: top;
+    -webkit-transform-origin: top;
+                
+    transition: transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -ms-transition: -ms-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -moz-transition: -moz-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -o-transition: -o-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+    -webkit-transition: -webkit-transform 300ms 150ms, z-index 0ms 150ms, height 300ms 0ms, top 300ms 0ms;
+}
+.contact:hover .envelope .top {
+    transition: transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -ms-transition: -ms-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -moz-transition: -moz-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -o-transition: -o-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    -webkit-transition: -webkit-transform 300ms 0ms, height 300ms 150ms, top 300ms 150ms;
+    
+    height: 10px;
+    top: -60px;
+    
+    transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+.contact .envelope .outer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-left: 83px solid transparent;
+    border-right: 82px solid transparent;
+    border-top: 70px solid #EEE;
+}
+.contact .envelope .outer .inner {
+    position: absolute;
+    left: -81px;
+    top: -73px;
+    border-left: 81px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 68px solid #333;
+}
+.contact .envelope .bottom {
+    position: absolute;
+    z-index: 20;
+    bottom: 0px;
+    left: 2px;
+    border-left: 81px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 45px solid #333;
+}
+.contact .envelope .left {
+    position: absolute;
+    z-index: 20; top: 0px;
+    left: 0px;
+    border-left: 81px solid #333;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+}
+.contact .envelope .right {
+    position: absolute;
+    z-index: 20;
+    top: 0px;
+    right: 0px;
+    border-right: 80px solid #333;
+    border-top: 45px solid transparent;
+    border-bottom: 45px solid transparent;
+}
+.contact .envelope .cover {
+    position: absolute;
+    z-index: 15;
+    bottom: 0px;
+    left: 0px;
+    height: 55%;
+    width: 100%;
+    background: #EEE;
+}
+.contact .envelope .paper {
+    position: absolute;
+    height: 83px;
+    padding-top: 10px;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: #F9F9F9;
+    z-index: 10;
+    transition: margin-top 300ms 0ms;
+    -ms-transition: margin-top 300ms 0ms;
+    -moz-transition: margin-top 300ms 0ms;
+    -o-transition: margin-top 300ms 0ms;
+    -webkit-transition: margin-top 300ms 0ms;
+}
+.contact:hover .envelope .paper {
+    margin-top: -60px;
+    transition: margin-top 300ms 150ms;
+    -ms-transition: margin-top 300ms 150ms;
+    -moz-transition: margin-top 300ms 150ms;
+    -o-transition: margin-top 300ms 150ms;
+    -webkit-transition: margin-top 300ms 150ms;
+}
+.contact .envelope .paper a {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    margin: 5px;
+    margin-bottom: 0px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+}
+.contact .envelope .paper a.call .i {
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    display: inline-block;
+    width: 3px;
+    height: 5px;
+    border-width: 5px 0 5px 2px;
+    border-style: solid;
+    border-color: #555;
+    background: transparent;
+    
+    transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+
+    border-top-left-radius: 3px 5px;
+    border-bottom-left-radius: 3px 5px;
+    -moz-border-radius-topleft: 3px 5px;
+    -moz-border-radius-bottomleft: 3px 5px;
+    -webkit-border-top-left-radius: 3px 5px;
+    -webkit-border-bottom-left-radius: 3px 5px;
+                                                                                                                                            
+    transition: border-color 300ms;
+    -ms-transition: border-color 300ms;
+    -moz-transition: border-color 300ms;
+    -o-transition: border-color 300ms;
+    -webkit-transition: border-color 300ms;
+}
+.contact .envelope .paper a {
+    color: #333;
+
+    transition: color 200ms;
+    -ms-transition: color 200ms;
+    -moz-transition: color 200ms;
+    -o-transition: color 200ms;
+    -webkit-transition: color 200ms;
+}
+.contact .envelope .paper a:hover {
+    color: #EEE;
+}
+.contact .envelope .paper a.call:hover .i {
+    border-color: #DDD;
+}
+.contact .envelope .paper a.mail .i {
+    position: absolute;
+    top: 0px;
+    left: 17px;
+    display: inline-block;
+
+}
+.paper {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+}
+
+
+/* Pretty Stuff */
+.contact-form-container {
+    position: absolute;
+  background: #F4F3F3;
+  font-family: 'Lato', sans-serif;
+z-index: 20; 
+top: 15%;
+left: 15%}
+
+.contact-us {
+  position: relative;
+  width: 250px;
+  background: #C3E0EC;
+  overflow: hidden; }
+  .contact-us:before {
+    position: absolute;
+    content: "";
+    bottom: -50px;
+    left: -100px;
+    height: 250px;
+    width: 400px;
+    background: #F8B7D8;
+    transform: rotate(25deg); }
+  .contact-us:after {
+    position: absolute;
+    content: "";
+    bottom: -80px;
+    right: -100px;
+    height: 270px;
+    width: 400px;
+    background: #9ED8EB;
+    transform: rotate(-25deg); }
+
+.contact-header {
+  color: white;
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 120px;
+  left: -40px; }
+  .contact-header h1 {
+    font-size: 1.5rem; }
+
+.social-bar {
+  position: absolute;
+  bottom: 20px;
+  left: 75px;
+  z-index: 1;
+  width: 100px; }
+  .social-bar ul {
+    list-style-type: none; }
+    .social-bar ul li {
+      display: inline-block;
+      color: white;
+      width: 25px;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      margin-right: -4px;
+      font-size: 1.2rem; }
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  color: #444; }
+  .header h1 {
+    font-weight: normal; }
+  .header h2 {
+    margin-top: 10px;
+    font-weight: 300; }
+
+.email, .phone {
+  text-align: center;
+  padding: 0px 0;
+  color: #444; }
+ .email h3, .phone h3 {
+    font-size: 1rem;
+    font-weight: 300; }
+.email i, .phone i {
+    color: #F8B7D8;
+    font-size: 1.7rem;
+    margin-bottom: 20px; }
+
+form {
+  position: relative;
+  width: 440px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: white; }
+  form input, form textarea {
+    background: white;
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    border: 0; }
+  form input {
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+    font-size: 1rem;
+    color: rgba(68, 68, 68, 0.8); }
+  form textarea {
+    border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+    resize: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: lato;
+    color: rgba(68, 68, 68, 0.8); }
+  form button {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 250px;
+    left: 95px;
+    border: 0;
+    border-radius: 20px;
+    bottom: -20px;
+    background: #9ED8EB;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 300;
+    outline: none; }
+
+.contact-form {
+  padding-bottom: 40px; }
+
+/* Layout Stuff */
+
+.contact-form-container {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr;
+  grid-template-areas: "contact-us header header header" "contact-us phone email address" "contact-us contact-form contact-form contact-form"; }
+
+.contact-us {
+  grid-area: contact-us; }
+
+.header {
+  grid-area: header; }
+
+
+.phone {
+  grid-area: phone; }
+
+.email {
+  grid-area: email; }
+
+.contact-form {
+  grid-area: contact-form; }

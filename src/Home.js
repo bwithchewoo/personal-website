@@ -168,14 +168,15 @@ const Home = () => {
                         </g>
                     </g>
                 </svg>
-            </div>
-            <div class="typewriter">
+                <div class="typewriter">
                 
                 <h1>
                 <span>I am a</span> <span className="highlight" ref={textRef}></span> 
                 </h1>
-            </div>
+                </div>
             <img src={currentImage} alt="Image" style={{ width: '220px', height: '200px' }} />
+            </div>
+            
         </div>
     )
 }

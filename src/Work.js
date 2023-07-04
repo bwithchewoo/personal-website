@@ -3,7 +3,7 @@ import './Work.css'
 import { ChevronLeft } from 'react-feather'
 import { ChevronRight } from 'react-feather'
 
-const CARDS = 5;
+
 const MAX_VISIBILITY = 3;
 
 const Card = ({ title, content, company, dates, additionalContent }) => {
@@ -42,7 +42,7 @@ const Carousel = ({ children }) => {
       )}
       {React.Children.map(children, (child, i) => (
         <div
-          className='card-container'
+          className='business-card-container'
           style={{
             '--active': i === active ? 1 : 0,
             '--offset': (active - i) / 3,
@@ -143,7 +143,7 @@ const Work = () => {
       ];
     
       return (
-        <div className='app'>
+        <div className='work'>
           <Carousel>
             {cards.map((card, i) => (
               <Card

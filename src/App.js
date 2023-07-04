@@ -16,14 +16,16 @@ function App() {
         <Navbar />
         <div className="content-container">
           <div className="vertical-box">
-            <img className="image" src={photo} style={{ width: 240, height: 320 }} />
+            <img className="image" src={photo} style={{ width: 270, height: 320 }} />
             <p>Anna Cho</p>
             <div className="icons-container">
               <Linkedin className="icon" />
               <GitHub className="icon" />
             </div>
           </div>
-          <div className="main-content">
+          
+        </div>
+        <div className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/work" element={<Work />} />
@@ -31,7 +33,6 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
-        </div>
       </div>
     </Router>
   );
